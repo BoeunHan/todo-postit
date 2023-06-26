@@ -1,12 +1,18 @@
+const container = document.querySelector(".paper-container");
+
 const addPaper = () => {
   const paper = document.createElement("div");
   paper.classList.add("postit-paper");
+  paper.id = Date.now();
 
   const paper_header = document.createElement("div");
   paper_header.classList.add("postit-paper-header");
 
   const button = document.createElement("button");
   button.classList.add("delete-button");
+  button.addEventListener("click", () => {
+    container.removeChild(paper);
+  });
 
   const paper_body = document.createElement("div");
   paper_body.classList.add("postit-paper-body");
@@ -19,7 +25,7 @@ const addPaper = () => {
   paper.appendChild(paper_header);
   paper.appendChild(paper_body);
 
-  document.querySelector(".paper-container").appendChild(paper);
+  container.appendChild(paper);
 };
 
 const addButton = document.querySelector(".add-button");
