@@ -1,11 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 .add-button {
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 48px;
+  font-weight: 400;
   border: none;
   background-color: rgb(111, 177, 239);
   color: white;
-  width: 40px;
-  height: 40px;
+  width: 72px;
+  height: 72px;
   border-radius: 999px;
   cursor: pointer;
   transition: all 0.2s;
@@ -17,4 +21,40 @@
 .add-button:hover {
   opacity: 0.8;
   transform: scale(0.9);
+}
+
+.postit-paper {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: none;
+  background-color: rgb(250, 117, 110);
+  cursor: pointer;
+}
+
+.postit-paper-header {
+  background-color: whitesmoke;
+  padding: 8px;
+  cursor: grab;
+}
+
+.postit-paper-body {
+  padding: 12px;
+  height: calc(100% - 32px);
+}
+
+.postit-paper-content {
+  resize: none;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
 }
